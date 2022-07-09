@@ -1,0 +1,18 @@
+<h2>Angular watchDomTree</h2>
+Example:
+<pre>
+&lt;div watchDomTree (dom-changed)="handleDomChange($event)">&lt;/div></pre
+>
+<div (dom-changed)="handleDomChange($event)" watchDomTree>
+  <ul>
+    <li *ngFor="let lis of list">{{ lis }}</li>
+  </ul>
+  <fieldset id="test">
+    <legend>test zone</legend>
+  </fieldset>
+</div>
+
+<fieldset>
+  <legend>logs</legend>
+  <div id="log"></div>
+</fieldset>
